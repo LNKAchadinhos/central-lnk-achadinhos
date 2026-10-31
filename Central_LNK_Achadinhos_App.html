@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171717">
+<title>Central LNK Achadinhos</title>
+<style>
+:root{--bg:#f5f5f5;--card:#fff;--ink:#171717;--muted:#737373;--orange:#f58220;--line:#e5e5e5;--green:#16834a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:#171717;color:#fff;padding:22px 18px 20px;border-bottom:4px solid var(--orange)}
+.wrap{max-width:1080px;margin:auto} .brand{display:flex;align-items:center;gap:12px}.mark{background:var(--orange);color:#171717;font-weight:900;font-size:24px;border-radius:12px;padding:8px 12px}
+.brand small{display:block;color:#bbb;letter-spacing:1.4px;font-size:10px}.hero{margin-top:20px;font-size:25px;font-weight:800}.sub{color:#c7c7c7;font-size:13px}
+main{max-width:1080px;margin:18px auto;padding:0 14px 40px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat,.panel,.tile{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:15px}.stat b{display:block;font-size:24px}.stat span,.muted{color:var(--muted);font-size:12px}
+nav{display:flex;gap:8px;overflow:auto;margin:18px 0;padding-bottom:4px}nav button{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:99px;padding:10px 15px;font-weight:650;color:#444}nav button.active{background:#171717;color:#fff;border-color:#171717}
+h2{font-size:19px;margin:0 0 12px}h3{font-size:15px;margin:0 0 8px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.tile{cursor:pointer;text-align:left;font-weight:750}.tile strong{display:block;color:var(--orange);font-size:24px;margin-bottom:8px}
+section{display:none}.show{display:block}.panel{margin-bottom:12px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{flex:1}
+label{display:block;font-size:12px;font-weight:700;margin:9px 0 5px}input,select,textarea{width:100%;border:1px solid #d4d4d4;border-radius:9px;padding:11px;background:#fff;font:inherit}textarea{min-height:92px;resize:vertical}
+button.primary{background:var(--orange);border:0;color:#171717;font-weight:800;border-radius:10px;padding:11px 15px;cursor:pointer}
+button.secondary{background:#171717;color:#fff;border:0;border-radius:10px;padding:11px 15px;cursor:pointer}
+button.danger{background:#fff1e7;color:#9a4300;border:1px solid #f4c49e;border-radius:9px;padding:7px 10px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.item{border-top:1px solid var(--line);padding:12px 0}.item:first-child{border-top:0}.tag{display:inline-block;border-radius:99px;background:#fff0e2;color:#934600;padding:3px 8px;font-size:11px;font-weight:750}
+.notice{background:#fff7ed;border:1px solid #fed7aa;padding:12px;border-radius:11px;font-size:13px;color:#7c3d0b}
+.empty{color:#777;text-align:center;padding:22px 8px;font-size:13px}
+footer{text-align:center;color:#888;font-size:11px;padding:20px}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.tiles{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.hero{font-size:22px}main{padding:0 12px 30px}}
+</style></head>
+<body>
+<header><div class="wrap">
+ <div class="brand"><div class="mark">LNK</div><div><b>LNK ACHADINHOS</b><small>CENTRAL INTELIGENTE DE AFILIADOS</small></div></div>
+ <div class="hero">Seu negócio. No seu controle.</div><div class="sub">Garimpo • Conteúdo • Vídeos • Publicações</div>
+</div></header>
+<main>
+ <div class="stats">
+  <div class="stat"><b id="statProducts">0</b><span>Produtos cadastrados</span></div>
+  <div class="stat"><b id="statVideos">0/10</b><span>Conteúdos criados</span></div>
+  <div class="stat"><b id="statCommission">R$ 0,00</b><span>Comissão registrada</span></div>
+  <div class="stat"><b id="statPosts">0</b><span>Posts no calendário</span></div>
+ </div>
+ <nav id="nav">
+  <button class="active" data-tab="home">Início</button><button data-tab="products">Produtos</button><button data-tab="creator">Criador IA</button><button data-tab="calendar">Publicações</button><button data-tab="results">Resultados</button>
+ </nav>
+ <section id="home" class="show">
+  <div class="panel"><h2>Painel de controle</h2><p class="muted">Sua primeira versão está pronta para organizar a operação. Cadastre produtos e gere os pacotes de conteúdo.</p>
+   <div class="tiles">
+    <button class="tile" data-go="products"><strong>⌕</strong>Garimpo de produtos<small class="muted">Cadastrar oportunidades</small></button>
+    <button class="tile" data-go="creator"><strong>✦</strong>Criar conteúdo<small class="muted">Ganchos, SEO e prompts</small></button>
+    <button class="tile" data-go="calendar"><strong>▦</strong>Agendar posts<small class="muted">Organizar calendário</small></button>
+    <button class="tile" data-go="results"><strong>↗</strong>Resultados<small class="muted">Cliques e comissões</small></button>
+   </div>
+  </div>
+  <div class="notice"><b>Importante:</b> esta é a versão inicial local. Ela não acessa automaticamente Shopee ou Mercado Livre nem publica nas redes. Para isso, precisaremos conectar APIs oficiais e autorizações das contas. Não informe senhas ou tokens nesta página.</div>
+ </section>
+ <section id="products">
+  <div class="panel"><h2>Cadastro de produtos</h2><p class="muted">Adicione produtos encontrados nas áreas de afiliados. Comissão e vendas devem ser dados reais exibidos na sua conta.</p>
+   <div class="grid"><div><label>Plataforma</label><select id="platform"><option>Shopee</option><option>Mercado Livre</option></select></div><div><label>Categoria</label><select id="category"><option>Casa e cozinha</option><option>Beleza</option><option>Moda</option><option>Acessórios automotivos</option><option>Pet</option><option>Tecnologia</option><option>Outros</option></select></div></div>
+   <label>Nome do produto</label><input id="pname" placeholder="Ex.: Organizador de gaveta">
+   <div class="grid"><div><label>Preço (R$)</label><input id="price" type="number" min="0" step=".01" placeholder="29,90"></div><div><label>Comissão por venda (R$)</label><input id="commission" type="number" min="0" step=".01" placeholder="4,50"></div></div>
+   <label>Link do produto</label><input id="productUrl" type="url" placeholder="https://...">
+   <label>Seu link de afiliado</label><input id="affiliateUrl" type="url" placeholder="https://...">
+   <label>Link da foto (opcional)</label><input id="photoUrl" type="url" placeholder="https://...">
+   <div class="actions"><button class="primary" id="addProduct">Salvar produto</button></div>
+  </div>
+  <div class="panel"><h2>Minha lista de produtos</h2><div id="productList" class="empty">Nenhum produto cadastrado ainda.</div></div>
+ </section>
+ <section id="creator">
+  <div class="panel"><h2>Gerador de conteúdo</h2><p class="muted">Escolha um produto salvo e gere um pacote inicial de ideias. A geração usa modelos de texto locais; não chama uma API paga.</p>
+   <label>Produto</label><select id="productSelect"><option value="">Selecione um produto</option></select>
+   <label>Estilo do conteúdo</label><select id="style"><option>Natural, jovem e direto</option><option>Quebrada e descontraído</option><option>Elegante e sofisticado</option><option>Demonstrativo e informativo</option></select>
+   <div class="actions"><button class="primary" id="generate">Gerar pacote de conteúdo</button></div>
+  </div>
+  <div class="panel" id="contentOutput"><h2>Seu pacote aparecerá aqui</h2><div class="empty">Selecione um produto para gerar ganchos, roteiro, legenda e prompt para vídeo.</div></div>
+ </section>
+ <section id="calendar">
+  <div class="panel"><h2>Calendário de publicações</h2>
+   <label>Conteúdo / produto</label><input id="postName" placeholder="Nome do vídeo ou produto">
+   <div class="grid"><div><label>Data</label><input id="postDate" type="date"></div><div><label>Horário</label><input id="postTime" type="time"></div></div>
+   <label>Plataforma</label><select id="postPlatform"><option>TikTok</option><option>Instagram Reels</option><option>YouTube Shorts</option><option>Facebook Reels</option><option>Pinterest</option><option>Kwai</option></select>
+   <label>Legenda</label><textarea id="postCaption" placeholder="Cole a legenda aprovada..."></textarea>
+   <div class="actions"><button class="primary" id="addPost">Adicionar ao calendário</button></div>
+  </div><div class="panel"><h2>Publicações planejadas</h2><div id="postList" class="empty">Nenhuma publicação planejada.</div></div>
+ </section>
+ <section id="results">
+  <div class="panel"><h2>Registrar resultados</h2>
+   <label>Produto / vídeo</label><input id="resultName" placeholder="Nome do produto">
+   <div class="grid"><div><label>Visualizações</label><input id="views" type="number" min="0" placeholder="0"></div><div><label>Cliques</label><input id="clicks" type="number" min="0" placeholder="0"></div></div>
+   <div class="grid"><div><label>Vendas</label><input id="sales" type="number" min="0" placeholder="0"></div><div><label>Comissão confirmada (R$)</label><input id="earned" type="number" min="0" step=".01" placeholder="0,00"></div></div>
+   <div class="actions"><button class="primary" id="addResult">Salvar resultado</button></div>
+  </div><div class="panel"><h2>Histórico</h2><div id="resultList" class="empty">Nenhum resultado registrado.</div></div>
+ </section>
+ <footer>Central LNK Achadinhos • MVP 1.0 • Seus dados ficam neste navegador neste protótipo.</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const load=k=>{try{return JSON.parse(localStorage.getItem('lnk_'+k)||'[]')}catch(e){return []}};
+const save=(k,v)=>localStorage.setItem('lnk_'+k,JSON.stringify(v));
+let products=load('products'),posts=load('posts'),results=load('results');
+function money(v){return Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function tab(id){document.querySelectorAll('section').forEach(s=>s.classList.toggle('show',s.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>tab(b.dataset.tab));
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>tab(b.dataset.go));
+function render(){
+ $('statProducts').textContent=products.length;$('statVideos').textContent=Math.min(10,load('contents').length)+'/10';
+ $('statCommission').textContent=money(results.reduce((a,r)=>a+Number(r.earned||0),0));$('statPosts').textContent=posts.length;
+ $('productList').innerHTML=products.length?products.map((p,i)=>`<div class="item"><b>${esc(p.name)}</b> <span class="tag">${esc(p.platform)}</span><div class="muted">${esc(p.category)} • Preço ${money(p.price)} • Comissão ${money(p.commission)}</div>${p.affiliateUrl?`<a href="${esc(p.affiliateUrl)}" target="_blank" rel="noopener">Abrir link de afiliado</a>`:''} <button class="danger" onclick="removeProduct(${i})">Excluir</button></div>`).join(''):'<div class="empty">Nenhum produto cadastrado ainda.</div>';
+ $('productSelect').innerHTML='<option value="">Selecione um produto</option>'+products.map((p,i)=>`<option value="${i}">${esc(p.name)} — ${esc(p.platform)}</option>`).join('');
+ $('postList').innerHTML=posts.length?posts.slice().sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)).map((p,i)=>`<div class="item"><b>${esc(p.name)}</b> <span class="tag">${esc(p.platform)}</span><div class="muted">${esc(p.date)} às ${esc(p.time)}</div><p>${esc(p.caption)}</p><button class="danger" onclick="removePost(${i})">Excluir</button></div>`).join(''):'<div class="empty">Nenhuma publicação planejada.</div>';
+ $('resultList').innerHTML=results.length?results.map((r,i)=>`<div class="item"><b>${esc(r.name)}</b><div class="muted">${r.views} visualizações • ${r.clicks} cliques • ${r.sales} vendas • ${money(r.earned)}</div><button class="danger" onclick="removeResult(${i})">Excluir</button></div>`).join(''):'<div class="empty">Nenhum resultado registrado.</div>';
+}
+window.removeProduct=i=>{products.splice(i,1);save('products',products);render()};
+window.removePost=i=>{posts.splice(i,1);save('posts',posts);render()};
+window.removeResult=i=>{results.splice(i,1);save('results',results);render()};
+$('addProduct').onclick=()=>{let p={platform:$('platform').value,category:$('category').value,name:$('pname').value.trim(),price:$('price').value,commission:$('commission').value,productUrl:$('productUrl').value,affiliateUrl:$('affiliateUrl').value,photoUrl:$('photoUrl').value};if(!p.name){alert('Informe o nome do produto.');return}products.push(p);save('products',products);['pname','price','commission','productUrl','affiliateUrl','photoUrl'].forEach(id=>$(id).value='');render();alert('Produto salvo!')};
+$('generate').onclick=()=>{let i=$('productSelect').value;if(i===''){alert('Selecione um produto.');return}let p=products[Number(i)],style=$('style').value;let hooks=[`Olha o que eu encontrei: ${p.name}!`,`Um detalhe desse ${p.name} que pode facilitar sua rotina`,`Será que esse ${p.name} vale a pena? Veja só`];let script=`Gente, olha esse ${p.name}! ${p.price?'Encontrei por '+money(p.price)+'. ':''}Vou mostrar os detalhes para vocês verem como funciona. Confira as informações e veja se faz sentido para sua rotina.`;let caption=`${p.name}: uma opção para quem procura praticidade e bom custo-benefício. Veja os detalhes, compare as avaliações e confira as informações no link de afiliado. #${p.category.replaceAll(' ','')} #Achadinhos #Ofertas`;let prompt=`Crie um vídeo vertical 9:16 sobre ${p.name}. Estilo: ${style}. Mostrar o produto com imagens fiéis à referência, detalhes reais, movimentos de câmera suaves e cortes profissionais. Narração em português brasileiro, natural e humanizada. Não inventar características, resultados ou benefícios que não estejam confirmados. Roteiro: ${script}`;let out=`<h2>Pacote de conteúdo: ${esc(p.name)}</h2><h3>3 ganchos</h3><ol>${hooks.map(h=>`<li>${esc(h)}</li>`).join('')}</ol><h3>Roteiro</h3><p>${esc(script)}</p><h3>Legenda SEO</h3><p>${esc(caption)}</p><h3>Prompt para Flow / Creative</h3><p>${esc(prompt)}</p><div class="actions"><button class="secondary" onclick="copyText(${JSON.stringify(hooks.join('\\n')+'\\n\\n'+script+'\\n\\n'+caption+'\\n\\n'+prompt).replace(/</g,'\\u003c')})">Copiar pacote</button><button class="primary" onclick="saveContent(${Number(i)})">Registrar como conteúdo</button></div>`;$('contentOutput').innerHTML=out};
+window.copyText=t=>navigator.clipboard?.writeText(t).then(()=>alert('Copiado!')).catch(()=>alert('Não foi possível copiar automaticamente. Selecione o texto.'));
+window.saveContent=i=>{let a=load('contents');a.push({product:products[i].name,created:new Date().toISOString()});save('contents',a);render();alert('Conteúdo registrado.')};
+$('addPost').onclick=()=>{let p={name:$('postName').value.trim(),date:$('postDate').value,time:$('postTime').value,platform:$('postPlatform').value,caption:$('postCaption').value};if(!p.name||!p.date){alert('Informe o conteúdo e a data.');return}posts.push(p);save('posts',posts);['postName','postDate','postTime','postCaption'].forEach(id=>$(id).value='');render()};
+$('addResult').onclick=()=>{let r={name:$('resultName').value.trim(),views:Number($('views').value||0),clicks:Number($('clicks').value||0),sales:Number($('sales').value||0),earned:Number($('earned').value||0)};if(!r.name){alert('Informe o produto ou vídeo.');return}results.push(r);save('results',results);['resultName','views','clicks','sales','earned'].forEach(id=>$(id).value='');render()};
+render();
+</script></body></html>
